@@ -122,7 +122,7 @@ if st.button("Predict Object Class", use_container_width=True):
     pred = model.predict(input_data)[0]
     pred_class = le.inverse_transform([pred])[0]
     
-    st.balloons()
+    
     st.success(f"Predicted Object Class: {pred_class}")
 
 # Sidebar Content
