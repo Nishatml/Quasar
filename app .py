@@ -6,7 +6,7 @@ from xgboost import XGBClassifier
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 import kagglehub
-from kagglehub import KaggleDatasetAdapter
+from kagglehub import KaggleDatasetAdapter 
 
 # Page Configuration
 st.set_page_config(
