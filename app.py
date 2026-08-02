@@ -91,7 +91,7 @@ col1.metric("Model Engine", "XGBoost")
 col2.metric("Test Accuracy", f"{accuracy*100:.2f}%")
 col3.metric("Data Source", "SDSS DR17")
 
-st.divider()
+
 
 # Input Section
 st.subheader("Enter Photometric Bands & Redshift")
