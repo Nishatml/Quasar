@@ -55,48 +55,6 @@ else:
 
 st.markdown(bg_style, unsafe_allow_html=True)
 
-# Custom Styling for Glassmorphism Containers & Cards
-st.markdown("""
-<style>
-    /* Glassmorphism Styling for Main Containers */
-    div[data-testid="stVerticalBlock"] > div {
-        background: rgba(15, 23, 42, 0.65);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border-radius: 16px;
-        padding: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
-        margin-bottom: 20px;
-    }
-
-    /* Custom Metric Cards */
-    .metric-card {
-        background: rgba(0, 212, 255, 0.12);
-        border: 1px solid rgba(0, 212, 255, 0.35);
-        border-radius: 12px;
-        padding: 15px;
-        text-align: center;
-    }
-
-    /* Prediction Result Card */
-    .pred-card {
-        background: linear-gradient(135deg, rgba(120, 0, 255, 0.25), rgba(0, 212, 255, 0.25));
-        border: 2px solid #00d4ff;
-        border-radius: 15px;
-        padding: 25px;
-        text-align: center;
-    }
-
-    /* Sidebar Glassmorphism */
-    section[data-testid="stSidebar"] {
-        background-color: rgba(10, 15, 30, 0.85) !important;
-        backdrop-filter: blur(15px);
-        border-right: 1px solid rgba(255, 255, 255, 0.15);
-    }
-</style>
-""", unsafe_allow_html=True)
-
 
 # Cache Model Training
 @st.cache_resource
