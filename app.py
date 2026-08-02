@@ -118,13 +118,14 @@ st.write(f"**u-g:** `{u_g:.4f}` | **g-r:** `{g_r:.4f}` | **r-i:** `{r_i:.4f}` | 
 
 # Prediction
 if st.button("Predict Object Class", use_container_width=True):
-    input_data = np.array([[u, g, r, i, z, redshift, u_g, g_r, r_i, i_z]])
-    pred = model.predict(input_data)[0]
-    pred_class = le.inverse_transform([pred])[0]
-    
-    
-    st.success(f"Predicted Object Class: {pred_class}")
-
+    # Check if inputs are realistic
+    if u <= 0 or g <= 0 or r <= 0 or i <= 0 or z <= 0:
+        st.warning("Please enter realistic photometric values.")
+    else:
+        input_data = np.array([[u, g, r, i, z, redshift, u_g, g_r, r_i, i_z]])
+        pred = model.predict(input_data)[0]
+        pred_class = le.inverse_transform([pred])[0]
+        st.success(f"Predicted Object Class: {pred_class}")
 # Sidebar Content
 with st.sidebar:
     st.header("Navigation & Info")
